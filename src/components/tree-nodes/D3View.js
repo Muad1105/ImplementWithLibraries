@@ -54,7 +54,12 @@ const D3View = () => {
   return (
     <div
       id="treeWrapper"
-      style={{ width: "100%", height: "50vw", margin: "2px solid red" }}
+      style={{
+        width: "50vw",
+        height: "75vh",
+        margin: "2px solid red",
+        borderRight: "1px solid black",
+      }}
     >
       <Tree data={orgChart} />
     </div>

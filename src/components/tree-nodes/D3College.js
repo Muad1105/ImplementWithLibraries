@@ -14,7 +14,21 @@ const orgChart = {
           name: "HOD CSE",
 
           attributes: {
-            department: "Coordination",
+            dep: "Coordination",
+          },
+          children: [
+            {
+              name: "Professor 3",
+              attributes: {
+                InCharge: "Section A",
+              },
+            },
+          ],
+        },
+        {
+          name: "HOD Aero",
+          attributes: {
+            Duty: "Coordination",
           },
           children: [
             {
@@ -31,20 +45,6 @@ const orgChart = {
             },
           ],
         },
-        {
-          name: "HOD Aero",
-          attributes: {
-            Duty: "Coordination",
-          },
-          children: [
-            {
-              name: "Professor 3",
-              attributes: {
-                InCharge: "Section A",
-              },
-            },
-          ],
-        },
       ],
     },
   ],
@@ -54,7 +54,7 @@ const D3College = () => {
   return (
     <div
       id="treeWrapper"
-      style={{ width: "100%", height: "50vw", margin: "2px solid red" }}
+      style={{ width: "50vw", height: "75vh", margin: "2px solid red" }}
     >
       <Tree data={orgChart} />
     </div>

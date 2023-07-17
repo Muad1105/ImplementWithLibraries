@@ -104,7 +104,14 @@ const TreeBeardSports = () => {
   };
 
   return (
-    <div style={{ width: "100%", textAlign: "left", background: "#21252B" }}>
+    <div
+      style={{
+        width: "60vW",
+        textAlign: "left",
+        background: "#21252B",
+        border: "2px solid black",
+      }}
+    >
       <Treebeard data={data} onToggle={onToggle} />
     </div>
   );

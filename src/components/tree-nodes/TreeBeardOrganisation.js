@@ -70,7 +70,7 @@ const TreeBeardOrganisation = () => {
   return (
     <div
       style={{
-        width: "100%",
+        width: "100vw",
         textAlign: "left",
         // paddingLeft: "300px",
         background: "#21252B",

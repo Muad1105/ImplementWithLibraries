@@ -1,27 +1,28 @@
-import "./App.css";
-import ConnectionFilter from "./components/specific-connection/ConnectionTable";
-import ConnectionNetwork from "./components/specific-connection/ConnectionTable";
+import React from "react";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 
-import D3View from "./components/tree-nodes/D3View";
-import TreeBeardOrganisation from "./components/tree-nodes/TreeBeardOrganisation";
-import TreeBeardSports from "./components/tree-nodes/TreeBeard";
-import PortsOfConnention from "./components/plot/PortsOfConnention";
-import HoverTooltip from "./components/plot/PortsOfConnention";
-import D3College from "./components/tree-nodes/D3College";
-// import DataGraph from "./components/plot/PortsOfConnention";
-// import ConnectionTable from "./components/specific-connection/ConnectionTable";
+import Task2And4 from "./components/Task2And4";
+import Task1 from "./components/Task1";
+
+import "./App.css";
+import HomePage from "./components/HomePage";
 
 function App() {
+  const navigate = useNavigate();
+
   return (
-    <div
-      className="App"
-      style={{ display: "flex", flexDirection: "column", gap: "200px" }}
-    >
-      <TreeBeardSports />
-      <TreeBeardOrganisation />
-      <D3View />
-      <D3College />
-      {/* <ConnectionTable /> */}
+    <div className="App">
+      <h2 className="header">
+        <h3>Assignment</h3>
+        <h5 className="redirect" onClick={() => navigate("/")}>
+          Rediect to Homepage
+        </h5>
+      </h2>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/task.1" element={<Task1 />} />
+        <Route path="/task.2.4" element={<Task2And4 />} />
+      </Routes>
     </div>
   );
 }
